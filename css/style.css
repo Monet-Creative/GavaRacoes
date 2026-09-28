@@ -147,6 +147,25 @@ nav.main a:hover{color:var(--orange-600);}
   .burger{display:flex;margin-left:auto;}
 }
 
+.mobile-menu{
+  border-top:1px solid var(--line);
+  background:var(--paper);
+  box-shadow:var(--shadow);
+}
+.mobile-menu nav{display:flex;flex-direction:column;padding:10px 20px 20px;gap:2px;}
+.mobile-menu nav a{
+  text-decoration:none;font-weight:600;font-size:.95rem;color:var(--ink-700);
+  padding:12px 4px;border-bottom:1px solid var(--line);
+  transition:color .15s;
+}
+.mobile-menu nav a:last-of-type{border-bottom:none;}
+.mobile-menu nav a:hover{color:var(--orange-600);}
+.mobile-menu nav .btn{
+  justify-content:center;margin-top:14px;border-bottom:none;padding-block:12px;
+  color:#241205;
+}
+.mobile-menu nav .btn svg{width:18px;height:18px;}
+
 /* ---------- hero ---------- */
 .hero{
   background:
