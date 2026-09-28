@@ -144,7 +144,7 @@ nav.main a:hover{color:var(--orange-600);}
 @media (max-width:860px){
   nav.main{display:none;}
   .header-cta{display:none;}
-  .burger{display:flex;}
+  .burger{display:flex;margin-left:auto;}
 }
 
 /* ---------- hero ---------- */
@@ -518,3 +518,52 @@ html{scroll-behavior:auto;}
 .lightbox-close svg{width:22px;height:22px;}
 .lightbox-close:hover{background:var(--orange-500);border-color:var(--orange-500);color:#241205;transform:rotate(90deg);}
 .lightbox-close:focus-visible{outline:2px solid var(--orange-500);outline-offset:3px;}
+
+/* ---------- telas menores ---------- */
+@media (max-width:480px){
+  .wrap{padding-inline:16px;}
+  section{padding-block:clamp(40px,10vw,64px);}
+
+  .topline .wrap{font-size:.72rem;gap:8px 14px;}
+  .topline-item:last-child{display:none;}
+
+  header.site .wrap{gap:12px;padding-block:10px;}
+  .brand img{width:34px;height:34px;}
+  .brand-word{font-size:1rem;}
+  .brand-word small{font-size:.58rem;}
+
+  .hero-ctas{flex-direction:column;align-items:stretch;}
+  .hero-ctas .btn{width:100%;}
+  .hero-trust{flex-direction:column;gap:10px;}
+
+  .hero-badge,.hero-logo-badge{width:78px;height:78px;}
+  .hero-badge{left:-8px;bottom:-14px;padding:4px;}
+  .hero-badge .n{font-size:1.4rem;}
+  .hero-badge .t1,.hero-badge .t2{font-size:.52rem;}
+  .hero-logo-badge{right:-8px;bottom:-14px;padding:8px;}
+
+  .stats-card>div{padding:18px 12px;}
+  .stats-card .num{font-size:1.3rem;}
+
+  .sobre-tag{position:static;margin-top:14px;max-width:none;border-radius:12px;}
+
+  .aval-score{padding:22px;}
+  .aval-score .big{font-size:2.6rem;}
+  .mini-stats{gap:16px;}
+
+  .loc-card{padding:24px 20px;}
+  .loc-card .eyebrow{display:block;margin-bottom:8px;}
+  .loc-card h2{margin-bottom:18px;}
+  .loc-row{gap:12px;padding-block:16px;}
+  .loc-row:first-of-type{padding-top:16px;}
+  .loc-row p{line-height:1.55;}
+  .loc-actions{margin-top:26px;}
+  .map-panel{min-height:260px;}
+
+  .cta-final .wrap{flex-direction:column;align-items:flex-start;}
+  .cta-btns{width:100%;flex-direction:column;}
+  .cta-btns .btn{width:100%;}
+
+  .foot-grid{grid-template-columns:1fr;}
+  .foot-bottom{flex-direction:column;align-items:flex-start;gap:12px;}
+}
