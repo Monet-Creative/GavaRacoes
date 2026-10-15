@@ -9,19 +9,40 @@
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:ital,wght@0,400..800;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=9">
 <script>document.documentElement.classList.add('js-reveal');</script>
 </head>
 <body>
 
 <header class="site" id="topo">
   <div class="wrap">
-    <a class="brand" href="#topo">
-      <img src="images/logo.png" alt="Gava Rações">
-      <span class="brand-word">Gava Rações<small>Desde 1997</small></span>
+    <a class="brand" href="#topo" aria-label="Gava Rações, início">
+      <img src="images/logo.png" alt="" width="44" height="44">
+      <span class="brand-word">Gava Rações<small>Pet e agro em Posse, desde 1997</small></span>
     </a>
-    <nav class="main">
+    <nav class="main" aria-label="Seções">
+      <a href="#sobre">Sobre</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#galeria">Portfólio</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="header-act">
+      <a class="header-phone" href="tel:+5524992669213">
+        <small>Ligue ou chame</small>(24) 99266-9213
+      </a>
+      <a class="btn btn-primary header-cta" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Gava%20Ra%C3%A7%C3%B5es%20e%20quero%20saber%20mais!" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/></svg>
+        <span>Falar no WhatsApp</span>
+      </a>
+      <button class="burger" id="burgerBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <nav aria-label="Menu">
       <a href="#sobre">Sobre</a>
       <a href="#produtos">Produtos</a>
       <a href="#galeria">Portfólio</a>
@@ -29,114 +50,86 @@
       <a href="#avaliacoes">Avaliações</a>
       <a href="#contato">Contato</a>
     </nav>
-    <a class="btn btn-primary header-cta" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Gava%20Ra%C3%A7%C3%B5es%20e%20quero%20saber%20mais!" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/></svg>
-      Falar no WhatsApp
-    </a>
-    <button class="burger" id="burgerBtn" aria-label="Abrir menu" aria-expanded="false">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-    </button>
-  </div>
-  <div class="mobile-menu" id="mobileMenu" hidden>
-    <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#produtos">Produtos</a>
-      <a href="#galeria">Portfólio</a>
-      <a href="#diferenciais">Diferenciais</a>
-      <a href="#avaliacoes">Avaliações</a>
-      <a href="#contato">Contato</a>
-      <a class="btn btn-primary" href="https://wa.me/5524992669213" target="_blank" rel="noopener">
+    <div class="mobile-menu-foot">
+      <a class="btn btn-primary" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Gava%20Ra%C3%A7%C3%B5es%20e%20quero%20saber%20mais!" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/></svg>
         Falar no WhatsApp
       </a>
-    </nav>
+      <p><a href="tel:+5524992669213">(24) 99266-9213</a> · Seg a sáb, a partir das 8h</p>
+      <p>Estrada União e Indústria, 33543 · Posse, Petrópolis</p>
+    </div>
   </div>
 </header>
 
-<div class="topline">
-  <div class="wrap">
-    <a class="topline-item" href="https://wa.me/5524992669213" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/><path d="M8.5 8.6c.3-.7.6-.7.9-.7h.6c.2 0 .4 0 .6.5s.7 1.7.8 1.9.1.4 0 .6-.3.4-.5.6-.4.4-.2.8a6.6 6.6 0 0 0 3 3c.4.2.6.1.8-.1s.9-1 1.1-1.3.4-.3.7-.2 1.9.9 2.2 1 .5.3.5.5-.2 1.2-.7 1.6-1.5 1.3-3 1-4.8-2-5.8-4.4c-.3-.7-.1-1.2.3-1.6"/></svg>
-      (24) 99266-9213
-    </a>
-    <a class="topline-item" href="https://www.google.com/maps/place/?q=place_id:ChIJ&amp;query=Estrada+Uni%C3%A3o+e+Ind%C3%BAstria+33543+Posse+Petr%C3%B3polis" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-      Posse, Petrópolis - RJ
-    </a>
-    <span class="topline-item">Seg a sáb · loja física e WhatsApp</span>
-  </div>
-</div>
-
 <main>
   <!-- ================= HERO ================= -->
-  <section class="hero">
+  <section class="hero" aria-labelledby="hero-title">
     <div class="wrap">
-      <div class="hero-copy reveal">
-        <span class="eyebrow" style="color:var(--orange-500)">Pet &amp; Agropecuária · Petrópolis, RJ</span>
-        <h1>Tudo para o seu pet e para a sua <em>propriedade</em>, numa loja só.</h1>
-        <p class="lede">Há mais de 29 anos a Gava Rações reúne ração, feno, medicamentos veterinários, produtos para piscina, ferramentas e selaria em um único endereço em Posse, Petrópolis — para quem cuida de bichos, do quintal à fazenda.</p>
-        <div class="hero-ctas">
+      <div class="hero-copy">
+        <h1 id="hero-title" class="reveal">
+          Tudo para o seu
+          <span class="hero-word" aria-hidden="true"><span class="is-on">cão.</span><span>gato.</span><span>cavalo.</span><span>gado.</span></span>
+          <span class="sr-only">pet e para a sua propriedade.</span>
+        </h1>
+        <p class="lede reveal">Ração, feno, remédios veterinários, piscina, ferramentas e selaria num só endereço em Posse, Petrópolis. Desde 1997.</p>
+        <div class="hero-ctas reveal">
           <a class="btn btn-primary" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Gava%20Ra%C3%A7%C3%B5es%20e%20quero%20saber%20mais!" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/></svg>
             Falar no WhatsApp
           </a>
-          <a class="btn btn-ghost-light" href="#produtos">Ver produtos</a>
-        </div>
-        <div class="hero-trust">
-          <span class="dot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg> <b>4,9</b>&nbsp;no Google · 40 avaliações</span>
-          <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <b>2.100+</b>&nbsp;seguidores no Instagram</span>
+          <a class="hero-link" href="#produtos">Ver produtos <span aria-hidden="true">→</span></a>
         </div>
       </div>
-      <div class="hero-art">
-        <div class="art-grid">
-          <figure class="tall"><img src="images/fachada-loja.jpg" alt="Fachada da loja Gava Rações em Posse, Petrópolis"></figure>
-        </div>
-        <div class="hero-badge"><span class="t1">Desde</span><span class="n">1997</span><span class="t2">29 anos</span></div>
-        <div class="hero-logo-badge"><img src="images/logo-quadrado.png" alt="Logo Gava Rações"></div>
+    </div>
+
+    <div class="hero-art">
+      <figure class="hero-photo">
+        <img src="images/fachada-loja.jpg" alt="Fachada da loja Gava Rações na Estrada União e Indústria, em Posse, Petrópolis" width="910" height="910">
+        <figcaption>Estrada União e Indústria, 33543 · Posse</figcaption>
+      </figure>
+      <div class="hero-swap" aria-hidden="true">
+        <img class="is-on" src="images/racao-petiscos.jpg" alt="" style="object-position:18% 50%">
+        <img src="images/racao-petiscos.jpg" alt="" style="object-position:86% 50%">
+        <img src="images/cavalo-pasto.jpg" alt="">
+        <img src="images/gado-confinamento.jpg" alt="">
       </div>
     </div>
   </section>
 
   <!-- ================= STATS BRIDGE ================= -->
   <div class="wrap stats-bridge">
-    <div class="stats-card reveal">
-      <div>
-        <div class="num"><span>29</span></div>
-        <div class="lbl">anos de tradição em Petrópolis</div>
-      </div>
-      <div>
-        <div class="num">4,9★</div>
-        <div class="lbl">avaliação no Google (40 avaliações)</div>
-      </div>
-      <div>
-        <div class="num">2.100+</div>
-        <div class="lbl">seguidores no Instagram</div>
-      </div>
-      <div>
-        <div class="num">6</div>
-        <div class="lbl">categorias completas, 1 endereço só</div>
-      </div>
-    </div>
+    <ul class="stats-band" aria-label="A Gava Rações em números">
+      <li class="reveal"><b class="num" data-count="29">29</b><span class="lbl">anos de tradição em Petrópolis</span></li>
+      <li class="reveal"><b class="num" data-count="4.9" data-decimals="1" data-suffix="★">4,9★</b><span class="lbl">no Google, com 40 avaliações</span></li>
+      <li class="reveal"><b class="num" data-count="2100" data-suffix="+">2.100+</b><span class="lbl">seguidores no Instagram</span></li>
+      <li class="reveal"><b class="num" data-count="6">6</b><span class="lbl">categorias, um endereço só</span></li>
+    </ul>
   </div>
 
   <!-- ================= SOBRE ================= -->
   <section class="sobre" id="sobre">
     <div class="wrap">
-      <div class="sobre-photo reveal">
-        <img src="images/petropolis-catedral.jpg" alt="Catedral de São Pedro de Alcântara e o rio Quitandinha, em Petrópolis - RJ">
-        <div class="sobre-tag"><b>1997</b>ano de fundação, em Posse, Petrópolis</div>
+      <div class="sobre-photos reveal">
+        <figure class="sobre-main">
+          <img src="images/loja-estoque-racoes.jpg" alt="Estoque de rações empilhado dentro da loja Gava Rações" loading="lazy" width="760" height="760">
+          <figcaption>O estoque da loja, em Posse</figcaption>
+        </figure>
+        <figure class="sobre-city">
+          <img src="images/petropolis-catedral.jpg" alt="Catedral de São Pedro de Alcântara e o rio Quitandinha, em Petrópolis - RJ" loading="lazy" width="1200" height="799">
+        </figure>
       </div>
-      <div class="sobre-copy reveal">
-        <span class="eyebrow">Nossa história</span>
-        <h2>Uma casa agropecuária de verdade, construída ao longo de três décadas</h2>
-        <p>A Gava Rações nasceu em Posse, na Estrada União e Indústria, e cresceu junto com os produtores, criadores e famílias da região de Petrópolis. Hoje seguimos o mesmo princípio do primeiro dia: reunir num só lugar tudo que o campo, o curral e a casa com bichos de estimação precisam.</p>
-        <p class="sobre-quote">"A mais completa loja Pet e Agro da região."</p>
-        <div class="chiplist">
-          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg> Equinos e bovinos</span>
-          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg> Aves e suínos</span>
-          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg> Cães e gatos</span>
-          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg> Piscina e ferramentas</span>
-        </div>
+
+      <div class="sobre-copy">
+        <h2 class="reveal">Uma casa agropecuária de verdade, desde 1997.</h2>
+        <p class="reveal">A Gava Rações nasceu em Posse, na Estrada União e Indústria, e cresceu junto com os produtores, criadores e famílias da região de Petrópolis. Hoje seguimos o mesmo princípio do primeiro dia: reunir num só lugar tudo que o campo, o curral e a casa com bichos de estimação precisam.</p>
+        <blockquote class="sobre-quote reveal">A mais completa loja Pet e Agro da região.</blockquote>
+
+        <ul class="sobre-frentes reveal" aria-label="Quem a gente atende">
+          <li><a href="#produtos"><img src="images/cavalo-pasto.jpg" alt="" loading="lazy"><span>Equinos e bovinos<small>Ração, feno e suplementos</small></span></a></li>
+          <li><a href="#produtos"><img src="images/farelo-graos.jpg" alt="" loading="lazy"><span>Aves e suínos<small>Farelos, grãos e milho</small></span></a></li>
+          <li><a href="#produtos"><img src="images/racao-premier.jpg" alt="" loading="lazy"><span>Cães e gatos<small>Rações, petiscos e remédios</small></span></a></li>
+          <li><a href="#produtos"><img src="images/hth-linha.jpg" alt="" loading="lazy"><span>Piscina e ferramentas<small>Cloro HTH, ferramentas e selaria</small></span></a></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -144,77 +137,227 @@
   <!-- ================= PRODUTOS ================= -->
   <section class="produtos" id="produtos">
     <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">O que você encontra na loja</span>
-        <h2>Da ração ao maquinário, cinco frentes num só balcão</h2>
-        <p>Um mix pensado para quem cuida de pets, de animais de produção e da propriedade inteira — sem precisar rodar a cidade atrás de fornecedor diferente para cada coisa.</p>
+      <div class="sec-head sec-split">
+        <h2 class="reveal">Da ração ao maquinário, num só balcão.</h2>
+        <p class="reveal">Seis prateleiras, um endereço só. Arraste cada prateleira para ver tudo, toque num produto para ver maior e peça direto pelo WhatsApp.</p>
       </div>
-      <div class="mosaic">
-        <div class="m-card m-c1" data-carousel>
-          <div class="car-track">
-            <div class="car-slide"><img src="images/racao-petiscos.jpg" alt="Cão e gato se alimentando de ração e petiscos Gava"></div>
-            <div class="car-slide"><img src="images/racao-brincalhao.jpg" alt="Ração Brincalhão Premium Especial para cães adultos"></div>
-            <div class="car-slide"><img src="images/racao-pedigree-umido.jpg" alt="Sachês de alimento úmido Pedigree em diversos sabores"></div>
-            <div class="car-slide"><img src="images/racao-friskies.jpg" alt="Ração Purina Friskies"></div>
-            <div class="car-slide"><img src="images/racao-whiskas.jpg" alt="Ração Whiskas para gatos"></div>
+      <div class="shelves">
+        <section class="shelf shelf-pet" aria-label="Ração e petiscos pet">
+          <header class="shelf-head reveal">
+            <h3>Ração &amp; petiscos pet</h3>
+            <p>Rações e petiscos para cães e gatos das melhores marcas, do filhote ao idoso.</p>
+            <a class="shelf-ask" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20consultar%20ra%C3%A7%C3%A3o%20e%20petiscos%20pet." target="_blank" rel="noopener">Consultar no WhatsApp <span aria-hidden="true">→</span></a>
+          </header>
+          <div class="shelf-rack">
+            <ul class="shelf-row">
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Rações e petiscos"><img src="images/racao-petiscos.jpg" alt="Cão e gato se alimentando de ração e petiscos" loading="lazy"></button>
+                <span class="shelf-name">Rações e petiscos</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Ra%C3%A7%C3%B5es%20e%20petiscos." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Brincalhão Premium Especial"><img src="images/racao-brincalhao.jpg" alt="Ração Brincalhão Premium Especial para cães adultos" loading="lazy"></button>
+                <span class="shelf-name">Brincalhão Premium Especial</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Brincalh%C3%A3o%20Premium%20Especial." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Pedigree úmido em sachê"><img src="images/racao-pedigree-umido.jpg" alt="Sachês de alimento úmido Pedigree em diversos sabores" loading="lazy"></button>
+                <span class="shelf-name">Pedigree úmido em sachê</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Pedigree%20%C3%BAmido%20em%20sach%C3%AA." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Purina Friskies"><img src="images/racao-friskies.jpg" alt="Ração Purina Friskies para gatos" loading="lazy"></button>
+                <span class="shelf-name">Purina Friskies</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Purina%20Friskies." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Whiskas"><img src="images/racao-whiskas.jpg" alt="Ração Whiskas para gatos" loading="lazy"></button>
+                <span class="shelf-name">Whiskas</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Whiskas." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+            </ul>
           </div>
-          <div class="txt"><h3>Ração &amp; petiscos pet</h3><p>Rações e petiscos para cães e gatos das melhores marcas, do filhote ao idoso.</p></div>
-          <div class="car-dots"></div>
-          <button type="button" class="car-arrow car-prev" aria-label="Imagem anterior">&#8249;</button>
-          <button type="button" class="car-arrow car-next" aria-label="Próxima imagem">&#8250;</button>
-        </div>
-        <div class="m-card m-c2" data-carousel>
-          <div class="car-track">
-            <div class="car-slide"><img src="images/equus-especial-floc.jpg" alt="Ração Equus 12 Especial Floc para cavalos"></div>
-            <div class="car-slide"><img src="images/farelo-graos.jpg" alt="Farelo e grãos para nutrição animal"></div>
-            <div class="car-slide"><img src="images/gado-confinamento.jpg" alt="Bovinos se alimentando no cocho de confinamento"></div>
-            <div class="car-slide"><img src="images/cavalo-pasto.jpg" alt="Cavalo saudável a pasto"></div>
-            <div class="car-slide"><img src="images/proequi-melacada.jpg" alt="Ração ProEqui Melaçada Guabi para equinos"></div>
+        </section>
+        <section class="shelf shelf-agro" aria-label="Equinos e bovinos">
+          <header class="shelf-head reveal">
+            <h3>Equinos &amp; bovinos</h3>
+            <p>Ração, suplementos e nutrição completa para performance e saúde do rebanho.</p>
+            <a class="shelf-ask" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20consultar%20ra%C3%A7%C3%A3o%20para%20equinos%20e%20bovinos." target="_blank" rel="noopener">Consultar no WhatsApp <span aria-hidden="true">→</span></a>
+          </header>
+          <div class="shelf-rack">
+            <ul class="shelf-row">
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Equus 12 Especial Floc"><img src="images/equus-especial-floc.jpg" alt="Ração Equus 12 Especial Floc para cavalos" loading="lazy"></button>
+                <span class="shelf-name">Equus 12 Especial Floc</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Equus%2012%20Especial%20Floc." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: ProEqui Melaçada Guabi"><img src="images/proequi-melacada.jpg" alt="Ração ProEqui Melaçada Guabi para equinos" loading="lazy"></button>
+                <span class="shelf-name">ProEqui Melaçada Guabi</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20ProEqui%20Mela%C3%A7ada%20Guabi." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Farelo e grãos"><img src="images/farelo-graos.jpg" alt="Farelo e grãos para nutrição animal" loading="lazy"></button>
+                <span class="shelf-name">Farelo e grãos</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Farelo%20e%20gr%C3%A3os." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Ração para bovinos"><img src="images/gado-confinamento.jpg" alt="Bovinos se alimentando no cocho de confinamento" loading="lazy"></button>
+                <span class="shelf-name">Ração para bovinos</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Ra%C3%A7%C3%A3o%20para%20bovinos." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Nutrição equina"><img src="images/cavalo-pasto.jpg" alt="Cavalo saudável a pasto" loading="lazy"></button>
+                <span class="shelf-name">Nutrição equina</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Nutri%C3%A7%C3%A3o%20equina." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+            </ul>
           </div>
-          <div class="txt"><h3>Equinos &amp; bovinos</h3><p>Ração, suplementos e nutrição completa para performance e saúde do rebanho.</p></div>
-          <div class="car-dots"></div>
-          <button type="button" class="car-arrow car-prev" aria-label="Imagem anterior">&#8249;</button>
-          <button type="button" class="car-arrow car-next" aria-label="Próxima imagem">&#8250;</button>
-        </div>
-        <div class="m-card m-c3" data-carousel>
-          <div class="car-track">
-            <div class="car-slide"><img src="images/feno-fardos.jpg" alt="Fardos de feno empilhados"></div>
-            <div class="car-slide"><img src="images/feno-campo.jpg" alt="Feno recém colhido no campo"></div>
-            <div class="car-slide"><img src="images/maravalha-fardos.jpg" alt="Fardos de maravalha de pinus"></div>
-            <div class="car-slide"><img src="images/silagem-milho.jpg" alt="Silagem de milho recém chegada"></div>
-            <div class="car-slide"><img src="images/maravalha-pinus.jpg" alt="Maravalha de pinus 100% natural"></div>
+        </section>
+        <section class="shelf shelf-feno" aria-label="Feno, alfafa e volumosos">
+          <header class="shelf-head reveal">
+            <h3>Feno, alfafa &amp; volumosos</h3>
+            <p>Feno Tifton, alfafa, silagem e maravalha de pinus sempre frescos.</p>
+            <a class="shelf-ask" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20consultar%20feno%2C%20alfafa%20e%20volumosos." target="_blank" rel="noopener">Consultar no WhatsApp <span aria-hidden="true">→</span></a>
+          </header>
+          <div class="shelf-rack">
+            <ul class="shelf-row">
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Feno em fardos"><img src="images/feno-fardos.jpg" alt="Fardos de feno empilhados" loading="lazy"></button>
+                <span class="shelf-name">Feno em fardos</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Feno%20em%20fardos." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Feno Tifton"><img src="images/feno-campo.jpg" alt="Feno recém colhido no campo" loading="lazy"></button>
+                <span class="shelf-name">Feno Tifton</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Feno%20Tifton." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Silagem de milho"><img src="images/silagem-milho.jpg" alt="Silagem de milho recém chegada" loading="lazy"></button>
+                <span class="shelf-name">Silagem de milho</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Silagem%20de%20milho." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Maravalha em fardos"><img src="images/maravalha-fardos.jpg" alt="Fardos de maravalha de pinus" loading="lazy"></button>
+                <span class="shelf-name">Maravalha em fardos</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Maravalha%20em%20fardos." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Maravalha de pinus"><img src="images/maravalha-pinus.jpg" alt="Maravalha de pinus 100% natural" loading="lazy"></button>
+                <span class="shelf-name">Maravalha de pinus</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Maravalha%20de%20pinus." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+            </ul>
           </div>
-          <div class="txt"><h3>Feno, alfafa &amp; volumosos</h3><p>Feno Tifton, alfafa, silagem e maravalha de pinus sempre frescos.</p></div>
-          <div class="car-dots"></div>
-          <button type="button" class="car-arrow car-prev" aria-label="Imagem anterior">&#8249;</button>
-          <button type="button" class="car-arrow car-next" aria-label="Próxima imagem">&#8250;</button>
-        </div>
-        <div class="m-card m-c4" data-carousel>
-          <div class="car-track">
-            <div class="car-slide"><img src="images/bota-caramelo.jpg" alt="Bota Raça Boots caramelo em couro"></div>
-            <div class="car-slide"><img src="images/bota-preta.jpg" alt="Bota Raça Boots preta em couro"></div>
-            <div class="car-slide"><img src="images/bota-kids-marrom.jpg" alt="Bota Raça Boots Kids marrom infantil"></div>
-            <div class="car-slide"><img src="images/bota-infantil-marrom.jpg" alt="Bota Raça infantil marrom com zíper"></div>
-            <div class="car-slide"><img src="images/bota-bebe.jpg" alt="Bota Raça para bebê"></div>
+        </section>
+        <section class="shelf shelf-piscina" aria-label="Piscina">
+          <header class="shelf-head reveal">
+            <h3>Piscina</h3>
+            <p>Linha HTH para deixar a água limpa e equilibrada o ano todo.</p>
+            <a class="shelf-ask" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20consultar%20produtos%20HTH%20para%20piscina." target="_blank" rel="noopener">Consultar no WhatsApp <span aria-hidden="true">→</span></a>
+          </header>
+          <div class="shelf-rack">
+            <ul class="shelf-row">
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Kit HTH completo"><img src="images/hth-kit-completo.jpg" alt="Kit de produtos HTH para tratamento de piscina" loading="lazy"></button>
+                <span class="shelf-name">Kit HTH completo</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Kit%20HTH%20completo." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Cloro HTH Tradicional"><img src="images/hth-balde-tradicional.jpg" alt="Balde de cloro HTH Tradicional" loading="lazy"></button>
+                <span class="shelf-name">Cloro HTH Tradicional</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Cloro%20HTH%20Tradicional." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Cloro granulado concentrado"><img src="images/hth-cloro-granulado.jpg" alt="Balde de cloro granulado concentrado HTH" loading="lazy"></button>
+                <span class="shelf-name">Cloro granulado concentrado</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Cloro%20granulado%20concentrado." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: HTH Previne Algas"><img src="images/hth-previne-algas.jpg" alt="Frasco de HTH Previne Algas" loading="lazy"></button>
+                <span class="shelf-name">HTH Previne Algas</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20HTH%20Previne%20Algas." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Linha HTH em frascos"><img src="images/hth-linha.jpg" alt="Frascos da linha HTH para piscina" loading="lazy"></button>
+                <span class="shelf-name">Linha HTH em frascos</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Linha%20HTH%20em%20frascos." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+            </ul>
           </div>
-          <div class="txt"><h3>Calçados &amp; EPI</h3><p>Botas de trabalho e galochas para toda a família.</p></div>
-          <div class="car-dots"></div>
-          <button type="button" class="car-arrow car-prev" aria-label="Imagem anterior">&#8249;</button>
-          <button type="button" class="car-arrow car-next" aria-label="Próxima imagem">&#8250;</button>
-        </div>
-        <div class="m-card m-c5" data-carousel>
-          <div class="car-track">
-            <div class="car-slide"><img src="images/nexgard-spectra.jpg" alt="NexGard Spectra antipulgas e carrapatos para cães"></div>
-            <div class="car-slide"><img src="images/nexgard.jpg" alt="NexGard tabletes mastigáveis contra pulgas e carrapatos"></div>
-            <div class="car-slide"><img src="images/colosso-pulverizacao.jpg" alt="Colosso Pulverização carrapaticida para bovinos"></div>
-            <div class="car-slide"><img src="images/glicol-pet.jpg" alt="Glicol Pet Organnact, vitamina para cães e gatos"></div>
-            <div class="car-slide"><img src="images/formiline.jpg" alt="Formiline, inseticida contra cupins, formigas e pulgas"></div>
+        </section>
+        <section class="shelf shelf-botas" aria-label="Calçados e EPI">
+          <header class="shelf-head reveal">
+            <h3>Calçados &amp; EPI</h3>
+            <p>Botas de trabalho e galochas para toda a família.</p>
+            <a class="shelf-ask" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20consultar%20botas%20e%20cal%C3%A7ados." target="_blank" rel="noopener">Consultar no WhatsApp <span aria-hidden="true">→</span></a>
+          </header>
+          <div class="shelf-rack">
+            <ul class="shelf-row">
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Raça Boots caramelo"><img src="images/bota-caramelo.jpg" alt="Bota Raça Boots caramelo em couro" loading="lazy"></button>
+                <span class="shelf-name">Raça Boots caramelo</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Ra%C3%A7a%20Boots%20caramelo." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Raça Boots preta"><img src="images/bota-preta.jpg" alt="Bota Raça Boots preta em couro" loading="lazy"></button>
+                <span class="shelf-name">Raça Boots preta</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Ra%C3%A7a%20Boots%20preta." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Raça Boots Kids"><img src="images/bota-kids-marrom.jpg" alt="Bota Raça Boots Kids marrom infantil" loading="lazy"></button>
+                <span class="shelf-name">Raça Boots Kids</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Ra%C3%A7a%20Boots%20Kids." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Bota infantil com zíper"><img src="images/bota-infantil-marrom.jpg" alt="Bota Raça infantil marrom com zíper" loading="lazy"></button>
+                <span class="shelf-name">Bota infantil com zíper</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Bota%20infantil%20com%20z%C3%ADper." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Bota Raça bebê"><img src="images/bota-bebe.jpg" alt="Bota Raça para bebê" loading="lazy"></button>
+                <span class="shelf-name">Bota Raça bebê</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Bota%20Ra%C3%A7a%20beb%C3%AA." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+            </ul>
           </div>
-          <div class="txt"><h3>Medicamentos veterinários</h3><p>Linha completa com orientação especializada.</p></div>
-          <div class="car-dots"></div>
-          <button type="button" class="car-arrow car-prev" aria-label="Imagem anterior">&#8249;</button>
-          <button type="button" class="car-arrow car-next" aria-label="Próxima imagem">&#8250;</button>
-        </div>
+        </section>
+        <section class="shelf shelf-vet" aria-label="Medicamentos veterinários">
+          <header class="shelf-head reveal">
+            <h3>Medicamentos veterinários</h3>
+            <p>Linha completa, com orientação de quem entende.</p>
+            <a class="shelf-ask" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20consultar%20medicamentos%20veterin%C3%A1rios." target="_blank" rel="noopener">Consultar no WhatsApp <span aria-hidden="true">→</span></a>
+          </header>
+          <div class="shelf-rack">
+            <ul class="shelf-row">
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: NexGard Spectra"><img src="images/nexgard-spectra.jpg" alt="NexGard Spectra antipulgas e carrapatos para cães" loading="lazy"></button>
+                <span class="shelf-name">NexGard Spectra</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20NexGard%20Spectra." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: NexGard"><img src="images/nexgard.jpg" alt="NexGard tabletes mastigáveis contra pulgas e carrapatos" loading="lazy"></button>
+                <span class="shelf-name">NexGard</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20NexGard." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Colosso Pulverização"><img src="images/colosso-pulverizacao.jpg" alt="Colosso Pulverização carrapaticida para bovinos" loading="lazy"></button>
+                <span class="shelf-name">Colosso Pulverização</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Colosso%20Pulveriza%C3%A7%C3%A3o." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Glicol Pet Organnact"><img src="images/glicol-pet.jpg" alt="Glicol Pet Organnact, vitamina para cães e gatos" loading="lazy"></button>
+                <span class="shelf-name">Glicol Pet Organnact</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Glicol%20Pet%20Organnact." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+              <li class="shelf-item">
+                <button type="button" class="shelf-zoom" aria-label="Ver maior: Formiline"><img src="images/formiline.jpg" alt="Formiline, inseticida contra cupins, formigas e pulgas" loading="lazy"></button>
+                <span class="shelf-name">Formiline</span>
+                <a class="shelf-buy" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20sobre%3A%20Formiline." target="_blank" rel="noopener">Pedir <span aria-hidden="true">→</span></a>
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
     </div>
   </section>
@@ -222,65 +365,39 @@
   <!-- ================= GALERIA / PORTFÓLIO ================= -->
   <section class="galeria" id="galeria">
     <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <span class="eyebrow">Portfólio</span>
-          <h2>Direto do nosso Instagram</h2>
-          <p style="margin-top:10px">Um retrato real da loja: produtos, chegadas de estoque e os clientes de quatro patas que passam por aqui.</p>
-        </div>
-        <div class="ig-follow">
-          <a class="btn btn-outline" href="https://instagram.com/gavaracoes" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
-            @gavaracoes
-          </a>
-        </div>
+      <div class="ig-side">
+        <h2 class="reveal">Direto do nosso Instagram.</h2>
+        <p class="reveal">Um retrato real da loja: produtos, chegadas de estoque e ofertas da semana, do jeito que a gente posta.</p>
+        <a class="ig-handle reveal" href="https://instagram.com/gavaracoes" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          <span>@gavaracoes<small>2.100+ seguidores · seguir</small></span>
+        </a>
       </div>
-      <div class="ig-grid">
-        <div class="ig-col">
-          <figure class="pin"><div class="ph"><img src="images/loja-estoque-racoes.jpg" alt="Post Instagram: estoque com rações Premier, Golden e Max na loja"></div><figcaption>Alimentação de qualidade</figcaption></figure>
-          <figure class="pin"><div class="ph"><img src="images/racao-premier.jpg" alt="Post Instagram: ração Premier para raças pequenas e específicas"></div><figcaption>Rações para todo porte</figcaption></figure>
-        </div>
-        <div class="ig-col">
-          <figure class="pin"><div class="ph"><img src="images/triumph-equinos.jpg" alt="Post Instagram: oferta especial da ração Triumph Socil para equinos"></div><figcaption>Suplementos para equinos</figcaption></figure>
-          <figure class="pin"><div class="ph"><img src="images/dog-licious.jpg" alt="Post Instagram: petiscos Dog Licious"></div><figcaption>Petiscos e biscoitos</figcaption></figure>
-          <figure class="pin"><div class="ph"><img src="images/botas.jpg" alt="Post Instagram: botas de couro à venda na loja"></div><figcaption>Calçados de trabalho</figcaption></figure>
-        </div>
-        <div class="ig-col">
-          <figure class="pin"><div class="ph"><img src="images/maravalha.jpg" alt="Post Instagram: maravalha de pinus 100% natural"></div><figcaption>Maravalha 100% natural</figcaption></figure>
-          <figure class="pin"><div class="ph"><img src="images/racao-cavalo.jpg" alt="Post Instagram: oferta de ração para cavalos"></div><figcaption>Ofertas em ração equina</figcaption></figure>
-        </div>
+      <div class="ig-wall">
+        <a class="ig-post reveal" href="https://instagram.com/gavaracoes" target="_blank" rel="noopener"><img src="images/loja-estoque-racoes.jpg" alt="Post: estoque com rações Premier, Golden e Max na loja" loading="lazy"><span>Alimentação de qualidade</span></a>
+        <a class="ig-post reveal" href="https://instagram.com/gavaracoes" target="_blank" rel="noopener"><img src="images/triumph-equinos.jpg" alt="Post: oferta especial da ração Triumph Socil para equinos" loading="lazy"><span>Suplementos para equinos</span></a>
+        <a class="ig-post reveal" href="https://instagram.com/gavaracoes" target="_blank" rel="noopener"><img src="images/maravalha.jpg" alt="Post: maravalha de pinus 100% natural" loading="lazy"><span>Maravalha 100% natural</span></a>
+        <a class="ig-post reveal" href="https://instagram.com/gavaracoes" target="_blank" rel="noopener"><img src="images/racao-premier.jpg" alt="Post: ração Premier para raças pequenas e específicas" loading="lazy"><span>Rações para todo porte</span></a>
+        <a class="ig-post reveal" href="https://instagram.com/gavaracoes" target="_blank" rel="noopener"><img src="images/dog-licious.jpg" alt="Post: petiscos Dog Licious" loading="lazy"><span>Petiscos e biscoitos</span></a>
+        <a class="ig-post reveal" href="https://instagram.com/gavaracoes" target="_blank" rel="noopener"><img src="images/racao-cavalo.jpg" alt="Post: oferta de ração para cavalos" loading="lazy"><span>Ofertas em ração equina</span></a>
       </div>
     </div>
   </section>
 
   <!-- ================= DIFERENCIAIS ================= -->
-  <section class="dif on-dark" id="diferenciais">
+  <section class="dif" id="diferenciais">
     <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">Por que a Gava</span>
-        <h2>O que faz um cliente atravessar a cidade para comprar aqui</h2>
-      </div>
-      <div class="dif-grid">
-        <div class="dif-card reveal">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg></div>
-          <h3>Quase 3 décadas de tradição</h3>
-          <p>Fundada em 1997, a Gava acompanha gerações de famílias e produtores da região.</p>
-        </div>
-        <div class="dif-card reveal">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
-          <h3>Tudo em um só lugar</h3>
-          <p>Pet, agro, piscina, ferramentas e selaria — sem precisar rodar a cidade inteira.</p>
-        </div>
-        <div class="dif-card reveal">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg></div>
-          <h3>4,9 de avaliação no Google</h3>
-          <p>Confiança comprovada por dezenas de avaliações reais de quem já comprou aqui.</p>
-        </div>
-        <div class="dif-card reveal">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></div>
-          <h3>Equipe que entende do assunto</h3>
-          <p>Orientação de verdade para equinos, bovinos, aves, suínos e pets de todo porte.</p>
-        </div>
+      <figure class="dif-photo reveal">
+        <img src="images/feno-fardos.jpg" alt="Fardos de feno empilhados" loading="lazy">
+      </figure>
+      <div class="dif-body">
+        <h2 class="reveal">Por que atravessam a cidade para comprar aqui.</h2>
+        <ul class="dif-list">
+          <li class="reveal"><b>1997</b><h3>Quase três décadas de tradição</h3><p>Fundada em 1997, a Gava acompanha gerações de famílias e produtores da região.</p></li>
+          <li class="reveal"><b>1 endereço</b><h3>Tudo num só lugar</h3><p>Pet, agro, piscina, ferramentas e selaria, sem precisar rodar a cidade inteira.</p></li>
+          <li class="reveal"><b>4,9★</b><h3>Nota alta no Google</h3><p>Confiança comprovada por 40 avaliações reais de quem já comprou aqui.</p></li>
+          <li class="reveal"><b>Do pet ao gado</b><h3>Equipe que entende do assunto</h3><p>Orientação de verdade para equinos, bovinos, aves, suínos e pets de todo porte.</p></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -288,25 +405,25 @@
   <!-- ================= AVALIAÇÕES ================= -->
   <section class="aval" id="avaliacoes">
     <div class="wrap">
-      <div class="aval-score reveal">
-        <div class="aval-stars">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
-        </div>
+      <div class="aval-score reveal" aria-label="Nota 4,9 de 5 no Google, com 40 avaliações">
         <div class="big">4,9</div>
-        <div class="sub">nota média no Google · 40 avaliações</div>
-        <div class="aval-logos">
-          <span>750+ no Facebook</span><span>·</span><span>2.100+ no Instagram</span>
+        <div class="aval-stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
         </div>
+        <div class="sub">nota média no Google, com 40 avaliações</div>
       </div>
-      <div class="aval-copy reveal">
-        <span class="eyebrow">Reputação</span>
-        <h2>Avaliação real, construída atendimento após atendimento</h2>
-        <p>A nota de 4,9 estrelas vem de clientes que compraram na loja — produtores, tutores de pets e donos de piscina que voltam sempre que precisam de algo para casa, o curral ou o canil.</p>
-        <a class="btn btn-outline" href="https://share.google/48BptB7DTDqOnCZW2" target="_blank" rel="noopener">Ver perfil no Google →</a>
+      <div class="aval-copy">
+        <h2 class="reveal">Nota construída no dia a dia de balcão.</h2>
+        <p class="reveal">A nota de 4,9 estrelas vem de clientes que compraram na loja: produtores, tutores de pets e donos de piscina que voltam sempre que precisam de algo para a casa, o curral ou o canil.</p>
+        <div class="aval-more reveal">
+          <div><b>750+</b><span>seguidores no Facebook</span></div>
+          <div><b>2.100+</b><span>seguidores no Instagram</span></div>
+        </div>
+        <a class="btn btn-dark reveal" href="https://share.google/48BptB7DTDqOnCZW2" target="_blank" rel="noopener">Ver avaliações no Google <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
@@ -314,34 +431,14 @@
   <!-- ================= LOCALIZAÇÃO / CONTATO ================= -->
   <section class="loc" id="contato">
     <div class="wrap">
-      <div class="loc-card reveal">
-        <span class="eyebrow">Visite a loja</span>
-        <h2 style="margin-top:10px;font-size:1.6rem;">Estamos em Posse, Petrópolis</h2>
-
-        <div class="loc-row">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div>
-            <h4>Endereço</h4>
-            <p>Estrada União e Indústria, 33543 — Posse, Petrópolis - RJ, CEP 25770-000</p>
-          </div>
-        </div>
-        <div class="loc-row">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div>
-            <h4>Horário</h4>
-            <p>Segunda a sábado, a partir das 08h. Confirme horários e disponibilidade pelo WhatsApp.</p>
-          </div>
-        </div>
-        <div class="loc-row">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/></svg></div>
-          <div>
-            <h4>WhatsApp / telefone</h4>
-            <p>(24) 99266-9213 · (24) 2259-1129</p>
-            <button class="copy-btn" id="copyPhone" type="button">Copiar número</button>
-          </div>
-        </div>
-
-        <div class="loc-actions">
+      <div class="loc-info">
+        <h2 class="reveal">Estamos em Posse, Petrópolis.</h2>
+        <dl class="loc-list">
+          <div class="reveal"><dt>Endereço</dt><dd>Estrada União e Indústria, 33543<br>Posse, Petrópolis - RJ · CEP 25770-000</dd></div>
+          <div class="reveal"><dt>Horário</dt><dd>Segunda a sábado, a partir das 8h.<br><span class="loc-note">Confirme horários e disponibilidade pelo WhatsApp.</span></dd></div>
+          <div class="reveal"><dt>WhatsApp e telefone</dt><dd><a href="tel:+5524992669213">(24) 99266-9213</a> · <a href="tel:+552422591129">(24) 2259-1129</a><br><button class="copy-btn" id="copyPhone" type="button">Copiar número</button></dd></div>
+        </dl>
+        <div class="loc-actions reveal">
           <a class="btn btn-primary" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Gava%20Ra%C3%A7%C3%B5es!" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/></svg>
             Chamar no WhatsApp
@@ -372,13 +469,16 @@
   <!-- ================= CTA FINAL ================= -->
   <section class="cta-final">
     <div class="wrap">
-      <div>
-        <h2>Precisa de ração, feno ou orientação agora?</h2>
+      <h2 class="reveal">Precisa de ração, feno ou orientação agora?</h2>
+      <div class="cta-side reveal">
         <p>Fale com a equipe da Gava Rações pelo WhatsApp e resolva sem sair de casa.</p>
-      </div>
-      <div class="cta-btns">
-        <a class="btn btn-primary" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Gava%20Ra%C3%A7%C3%B5es%20e%20quero%20saber%20mais!" target="_blank" rel="noopener">Falar no WhatsApp agora</a>
-        <a class="btn btn-outline" href="#produtos">Ver todos os produtos</a>
+        <div class="cta-btns">
+          <a class="btn btn-primary" href="https://wa.me/5524992669213?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Gava%20Ra%C3%A7%C3%B5es%20e%20quero%20saber%20mais!" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/></svg>
+            Falar no WhatsApp agora
+          </a>
+          <a class="btn btn-outline" href="#produtos">Ver todos os produtos</a>
+        </div>
       </div>
     </div>
   </section>
@@ -387,12 +487,12 @@
 <footer>
   <div class="wrap">
     <div class="foot-grid">
-      <div>
-        <a class="brand" href="#topo" style="text-decoration:none;">
-          <img src="images/logo.png" alt="Gava Rações">
-          <span class="brand-word">Gava Rações<small>Desde 1997</small></span>
+      <div class="foot-brand">
+        <a class="foot-logo" href="#topo" aria-label="Gava Rações, voltar ao início">
+          <img src="images/logo.png" alt="" width="48" height="48">
+          <span>Gava Rações<small>Pet e agro em Posse, desde 1997</small></span>
         </a>
-        <p class="tagline">A mais completa loja Pet e Agro da região — em Posse, Petrópolis.</p>
+        <p class="tagline">A mais completa loja Pet e Agro da região, em Posse, Petrópolis.</p>
         <div class="foot-social">
           <a href="https://instagram.com/gavaracoes" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
           <a href="https://www.facebook.com/gava.racoes" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
@@ -405,16 +505,19 @@
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#produtos">Produtos</a></li>
           <li><a href="#galeria">Portfólio</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
           <li><a href="#avaliacoes">Avaliações</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
       </div>
       <div>
         <h5>Categorias</h5>
         <ul>
-          <li>Pet &amp; petiscos</li>
-          <li>Equinos &amp; bovinos</li>
-          <li>Feno &amp; volumosos</li>
-          <li>Calçados &amp; EPI</li>
+          <li><a href="#produtos">Pet e petiscos</a></li>
+          <li><a href="#produtos">Equinos e bovinos</a></li>
+          <li><a href="#produtos">Feno e volumosos</a></li>
+          <li><a href="#produtos">Calçados e EPI</a></li>
+          <li><a href="#produtos">Medicamentos veterinários</a></li>
         </ul>
       </div>
       <div>
@@ -422,19 +525,22 @@
         <ul>
           <li>Estrada União e Indústria, 33543</li>
           <li>Posse, Petrópolis - RJ · 25770-000</li>
-          <li>(24) 99266-9213</li>
-          <li>(24) 2259-1129</li>
+          <li><a href="tel:+5524992669213">(24) 99266-9213</a></li>
+          <li><a href="tel:+552422591129">(24) 2259-1129</a></li>
+          <li>Seg a sáb, a partir das 8h</li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 Gava Rações · desde 1997</span>
-      <a class="foot-credit" href="https://www.instagram.com/monetcreative_/" target="_blank" rel="noopener" aria-label="Landing Page by Monet Creative">
-        <span>Landing Page by</span>
+      <a class="foot-credit" href="https://www.instagram.com/monetcreative_/" target="_blank" rel="noopener" aria-label="Landing Page by Monet Creative (abre o Instagram da Monet)">
+        <span class="fc-txt">Landing Page by</span>
         <img src="images/monet-creative.png" alt="Monet Creative">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
       </a>
     </div>
   </div>
+  <p class="foot-word" aria-hidden="true">Gava Rações</p>
 </footer>
 
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem em tela cheia" hidden>
@@ -447,7 +553,7 @@
   </figure>
 </div>
 
-<script src="js/script.js"></script>
+<script src="js/script.js?v=9"></script>
 </body>
 </html>
 
